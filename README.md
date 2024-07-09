@@ -24,9 +24,9 @@ Após isso pode iniciar o projeto normalmente.
 
 ✅ [US001] Criar entidade
     ✅ [US001-1] Entidade noticia
-  [US002] Aplicar a lib Flyway
-      [US002-1] Inserir a dependência
-      [US002-2] Criar migration na pasta resources/db/migration
+✅  [US002] Aplicar a lib Flyway
+    ✅  [US002-1] Inserir a dependência
+    ✅  [US002-2] Criar migration na pasta resources/db/migration
   [US003] Publicação de noticias
       [US003-1] Cadastrar noticia
       [US003-2] Visualizar noticia
