@@ -32,8 +32,8 @@ Após isso pode iniciar o projeto normalmente.
     ✅  [US003-2] Visualizar noticia
     ✅  [US003-3] Editar noticia
     ✅  [US003-4] Excluir noticia
-  [US004] Criar exceptions personalizadas
-      [US004-1] Exception FindNoticiaException
-      [US004-2] Exception NotFoundNoticiaException
-      [US004-3] Tratativa com ErroHandler
+✅  [US004] Criar exceptions personalizadas
+    ✅  [US004-1] Exception FindNoticiaException
+    ✅  [US004-2] Exception NotFoundNoticiaException
+    ✅  [US004-3] Tratativa com ErroHandler
     
