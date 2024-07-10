@@ -1,2 +1,2 @@
 ALTER TABLE noticia
-ADD COLUMN dataPublicacao DATE; 
+ADD COLUMN data_publicacao DATE; 
