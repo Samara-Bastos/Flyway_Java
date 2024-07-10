@@ -1,6 +1,7 @@
 package projeto.flyway.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
 import org.springframework.stereotype.Service;
@@ -25,7 +26,8 @@ public class NoticiaServiceImpl implements NoticiaService {
             throw new FindNoticiaException("Já existe uma noticia com esse código");
         }
         Noticia noticia = NoticiaMapper.INSTANCE.dtoToNoticia(request);
-        repository.save(noticia);
+        noticia.setDataPublicacao(LocalDate.now());
+        repository.save(noticia);       
         return NoticiaMapper.INSTANCE.noticiaToResponse(noticia); 
     };
 
