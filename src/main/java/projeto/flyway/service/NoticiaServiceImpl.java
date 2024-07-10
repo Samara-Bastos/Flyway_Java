@@ -3,12 +3,12 @@ package projeto.flyway.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import java.util.List;
 import java.util.Optional;
-
 import org.springframework.stereotype.Service;
-
 import projeto.flyway.Mapper.NoticiaMapper;
 import projeto.flyway.dto.Request;
 import projeto.flyway.dto.Response;
+import projeto.flyway.exception.FindNoticiaException;
+import projeto.flyway.exception.NotFoundNoticiaException;
 import projeto.flyway.model.Noticia;
 import projeto.flyway.repository.NoticiaRepository;
 
@@ -22,7 +22,7 @@ public class NoticiaServiceImpl implements NoticiaService {
     public Response publicar(Request request){
         Optional<Noticia> noticiaReturn =  repository.findByCodigo(request.codigo());
         if (noticiaReturn.isPresent()) {
-            
+            throw new FindNoticiaException("Já existe uma noticia com esse código");
         }
         Noticia noticia = NoticiaMapper.INSTANCE.dtoToNoticia(request);
         repository.save(noticia);
@@ -38,7 +38,7 @@ public class NoticiaServiceImpl implements NoticiaService {
     public Response editar(String código, Request request){
         Optional<Noticia> noticiaReturn =  repository.findByCodigo(código);
         if (noticiaReturn.isEmpty()) {
-            
+            throw new NotFoundNoticiaException("Não existe nenhuma noticia com esse código");
         }
         Noticia noticia = NoticiaMapper.INSTANCE.dtoToNoticia(request);
 
@@ -54,7 +54,7 @@ public class NoticiaServiceImpl implements NoticiaService {
     public void excluir(String código){
         Optional<Noticia> noticiaReturn =  repository.findByCodigo(código);
         if (noticiaReturn.isEmpty()) {
-            
+            throw new NotFoundNoticiaException("Não existe nenhuma noticia com esse código");
         }
         repository.delete(noticiaReturn.get());
     };
