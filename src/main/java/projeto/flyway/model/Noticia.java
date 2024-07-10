@@ -1,5 +1,7 @@
 package projeto.flyway.model;
 
+import java.time.LocalDate;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -32,5 +34,8 @@ public class Noticia {
 
     @Column
     private String autor;
+
+    @Column
+    private LocalDate dataPublicacao;
     
 }
