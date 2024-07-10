@@ -1,4 +1,9 @@
 package projeto.flyway.dto;
 
-public record Response(String titulo, String descricao, String autor) {
+import projeto.flyway.model.Noticia;
+
+public record Response(String codigo , String titulo, String descricao, String autor) {
+    public Response(Noticia noticia){
+        this(noticia.getCodigo(), noticia.getTitulo(), noticia.getDescricao(), noticia.getAutor());
+    }
 }

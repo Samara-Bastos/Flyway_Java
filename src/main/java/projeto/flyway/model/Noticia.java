@@ -22,6 +22,9 @@ public class Noticia {
     private Long id;
 
     @Column
+    private String codigo;
+
+    @Column
     private String titulo;
 
     @Column

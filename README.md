@@ -27,11 +27,11 @@ Após isso pode iniciar o projeto normalmente.
 ✅  [US002] Aplicar a lib Flyway
     ✅  [US002-1] Inserir a dependência
     ✅  [US002-2] Criar migration na pasta resources/db/migration
-  [US003] Publicação de noticias
-      [US003-1] Cadastrar noticia
-      [US003-2] Visualizar noticia
-      [US003-3] Editar noticia
-      [US003-4] Excluir noticia
+✅  [US003] Publicação de noticias
+    ✅  [US003-1] Cadastrar noticia
+    ✅  [US003-2] Visualizar noticia
+    ✅  [US003-3] Editar noticia
+    ✅  [US003-4] Excluir noticia
   [US004] Criar exceptions personalizadas
       [US004-1] Exception FindNoticiaException
       [US004-2] Exception NotFoundNoticiaException

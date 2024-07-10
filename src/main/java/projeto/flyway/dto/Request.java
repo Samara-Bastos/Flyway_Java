@@ -1,4 +1,17 @@
 package projeto.flyway.dto;
 
-public record Request(String titulo, String descricao, String autor) {
+import jakarta.validation.constraints.NotBlank;
+
+public record Request(
+    @NotBlank
+    String codigo, 
+    
+    @NotBlank
+    String titulo, 
+    
+    @NotBlank
+    String descricao, 
+    
+    @NotBlank
+    String autor) {
 }
